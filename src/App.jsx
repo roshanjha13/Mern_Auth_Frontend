@@ -1,9 +1,13 @@
-function App() {
+import React from "react";
+import Header from "./components/Header";
+
+const App = () => {
   return (
     <>
-      <h1>mern app</h1>
+      <Header />
+      <h1>mern auth</h1>
     </>
   );
-}
+};
 
 export default App;
