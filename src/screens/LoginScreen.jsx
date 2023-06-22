@@ -7,6 +7,8 @@ import FormContainer from "../components/FormContainer";
 import { useLoginMutation } from "../slice/userApiSlice";
 import { setCredentials } from "../slice/authSlice";
 import { toast } from "react-toastify";
+import Loader from "../components/Loader";
+
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -55,6 +57,7 @@ const LoginScreen = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}></Form.Control>
         </Form.Group>
+        {isLoading && <Loader />}
         <Button type="submit" variant="primary" className="mt-3">
           Sign In
         </Button>
